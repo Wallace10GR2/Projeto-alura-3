@@ -9,61 +9,54 @@
 <body>
     <main>
         <section id="container">
-            <!-- Flashcards serão gerados dinamicamente via JavaScript -->
+            <article class="cartao">
+                <div class="cartao__conteudo">
+                    <h3>Programação</h3>
+                    <div class="cartao__conteudo__pergunta">
+                        <p>Quais são as principais características do Python?</p>
+                    </div>
+                    <div class="cartao__conteudo__resposta">
+                        <p>O Python é conhecido por sua simplicidade, legibilidade e ampla versatilidade.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="cartao">
+                <div class="cartao__conteudo">
+                    <h3>Geografia</h3>
+                    <div class="cartao__conteudo__pergunta">
+                        <p>Que cidade é conhecida como a "Cidade Luz"?</p>
+                    </div>
+                    <div class="cartao__conteudo__resposta">
+                        <p>A cidade conhecida como "Cidade Luz" é Paris.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="cartao">
+                <div class="cartao__conteudo">
+                    <h3>Programação</h3>
+                    <div class="cartao__conteudo__pergunta">
+                        <p>Qual é a finalidade de uma função?</p>
+                    </div>
+                    <div class="cartao__conteudo__resposta">
+                        <p>A função serve para agrupar código reutilizável que executa uma tarefa específica.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="cartao">
+                <div class="cartao__conteudo">
+                    <h3>Língua Inglesa</h3>
+                    <div class="cartao__conteudo__pergunta">
+                        <p>Qual é a tradução de "Good morning"?</p>
+                    </div>
+                    <div class="cartao__conteudo__resposta">
+                        <p>A tradução de "Good morning" é "Bom dia".</p>
+                    </div>
+                </div>
+            </article>
         </section>
     </main>
     <footer>
         <p>Projeto desenvolvido por Wallace</p>
     </footer>
-    <script>
-        // Função para criar cartões
-        function criaCartao(categoria, pergunta, resposta) {
-            const container = document.getElementById('container');
-
-            // Criação do elemento do cartão
-            const cartao = document.createElement('article');
-            cartao.classList.add('cartao');
-
-            const conteudo = `
-                <div class="cartao__conteudo">
-                    <h3>${categoria}</h3>
-                    <div class="cartao__conteudo__pergunta">
-                        <p>${pergunta}</p>
-                    </div>
-                    <div class="cartao__conteudo__resposta">
-                        <p>${resposta}</p>
-                    </div>
-                </div>
-            `;
-
-            cartao.innerHTML = conteudo;
-            container.appendChild(cartao);
-        }
-
-        // Criando cartões com base nos dados
-        criaCartao(
-            'Programação',
-            'Quais são as principais características do Python?',
-            'O Python é conhecido por sua simplicidade, legibilidade e ampla versatilidade.'
-        );
-
-        criaCartao(
-            'Geografia',
-            'Que cidade é conhecida como a "Cidade Luz"?',
-            'A cidade conhecida como "Cidade Luz" é Paris.'
-        );
-
-        criaCartao(
-            'Programação',
-            'Qual é a finalidade de uma função?',
-            'A função serve para agrupar código reutilizável que executa uma tarefa específica.'
-        );
-
-        criaCartao(
-            'Língua Inglesa',
-            'Qual é a tradução de "Good morning"?',
-            'A tradução de "Good morning" é "Bom dia".'
-        );
-    </script>
 </body>
 </html>
